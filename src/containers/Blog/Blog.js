@@ -13,7 +13,7 @@ class Blog extends Component {
                     <nav>
                         <ul>
                             <li><NavLink 
-                            to='/' 
+                            to='/posts/' 
                             exact
                             activeStyle={{textDecoration : 'underline'}}
                             >Posts</NavLink></li>
@@ -26,7 +26,7 @@ class Blog extends Component {
                 {/* <Route path='/' exact render={() => <h1>Home</h1>}/> */}
                 <Switch>
                     <Route path='/new-post' component={NewPost} />
-                    <Route path='/' component={Posts} /> 
+                    <Route path='/posts' component={Posts} /> 
                     {/* <Redirect from='/' to='/new-post'/> */}
                 </Switch>
             </div>

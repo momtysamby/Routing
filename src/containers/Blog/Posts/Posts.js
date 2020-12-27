@@ -40,7 +40,7 @@ class Posts extends Component {
         if (!this.state.error) {
             posts = this.state.posts.map(post => {
                 return (
-                <Link to={'/' + post.id} key={post.id}>
+                <Link to={'/posts/' + post.id} key={post.id}>
                     <Post  
                         title={post.title} 
                         author={post.author}
@@ -53,7 +53,7 @@ class Posts extends Component {
                 <section className='Posts'>
                     {posts}
                 </section>
-                <Route path='/:id' exact component={FullPost} />
+                <Route path={this.props.match.url + '/:id'} exact component={FullPost} />
             </div>
 
         )
